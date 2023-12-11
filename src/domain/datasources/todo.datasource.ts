@@ -1,5 +1,5 @@
-import { CreateTodoDto, UpdateTodoDto } from "../dtos";
-import { TodoEntity } from "../entities/todo.entity";
+import { CreateTodoDto, UpdateTodoDto } from '../dtos';
+import { TodoEntity } from '../entities/todo.entity';
 
 export interface TodoDatasource {
   create(createTodoDto: CreateTodoDto): Promise<TodoEntity>;
