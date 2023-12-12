@@ -8,7 +8,11 @@ describe('Should call server with argumetns and start', () => {
     await import('../src/app');
     expect(Server).toHaveBeenCalledTimes(1);
     expect(Server).toHaveBeenLastCalledWith({
-      port: envs.PORT
+      port: envs.PORT,
+      public_path: envs.PUBLIC_PATH,
+      routes: expect.any(Function),
     });
+
+    expect(Server.prototype.start).toHaveBeenCalledWith();
   });
 });
